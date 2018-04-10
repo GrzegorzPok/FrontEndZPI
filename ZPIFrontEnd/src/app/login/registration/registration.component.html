@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="card card-container">
+      <h3 class="text-center">REJESTRACJA</h3>
+      <img id="profile-img" class="profile-img-card" src="../../assets/img/avatar.png"/>
+      <form class="form-signin">
+        <input [(ngModel)]='login' name="login" type="text" id="inputLogin" class="form-control" placeholder="Login" required>
+        <input [(ngModel)]='password' name="password" type="password" id="inputPassword" class="form-control" placeholder="Haslo" required>
+        <input [(ngModel)]='email' name="email" type="text" id="inputEmail" class="form-control" placeholder="Email" required>
+        <input [(ngModel)]='name' name="name" type="text" id="inputName" class="form-control" placeholder="Imie" required>
+        <input [(ngModel)]='surname' name="surname" type="text" id="inputSurname" class="form-control" placeholder="Nazwisko" required>
+        <button class="btn btn-sm btn-yellow" type="submit">Zarejestruj</button>
+      </form>
+    </div>
+  </div>

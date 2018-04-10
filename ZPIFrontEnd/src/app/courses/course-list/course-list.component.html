@@ -1,0 +1,36 @@
+<div class="container">
+  <h3>Wyszukiwarka</h3>
+    <app-filter-engine></app-filter-engine>
+  <div class="row">
+    <div class="col-sm-12">
+      <table *ngIf="courses.length > 0; else noCoursesInfo" class="co-table table table-striped">
+        <thead>
+          <tr><h3>Nasze kursy</h3></tr>
+        </thead>
+        <tbody *ngFor="let course of courses">
+          <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+          </tr>
+          <tr>
+            <td class="th-picture" rowspan="2"><img class="picture" src="../../../assets/img/math1.jpg" alt="math"></td>
+            <td class="title"> {{ course.title }} </td>
+            <td class="th-details">Autor: John</td>
+          </tr>
+          <tr>
+            <td class="td-description"> {{ course.description }} </td>
+            <td> <button class="btn btn-blue btn-sm">
+              <span class="glyphicon glyphicon-plus pull-left">&nbsp;</span>Zapisz się </button> </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <ng-template #noCoursesInfo>
+        <div class="no-courses-info">
+          <p>Obecnie nie mamy dla Ciebie kursów w ofercie</p>
+        </div>
+      </ng-template>
+    </div>
+  </div>
+</div>
